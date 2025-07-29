@@ -1,0 +1,511 @@
+@charset "UTF-8";
+
+
+/*#033E8C #038C33 #F2D230 #F2C335 #D91E1E*/
+/*index.html inicio*/
+:root {
+  --cor-primaria: #004aad;         /* Azul São Caetano */
+  --cor-secundaria: #ffd500;       /* Amarelo destaque */
+  --cor-primaria-clara: #e0e7ff;   /* Fundo claro para destaques */
+  --cor-fundo: #f9f9f9;            /* Cor de fundo do site */
+  --cor-texto: #333;               /* Cor padrão dos textos */
+  --cor-texto-suave: #444;         /* Um pouco mais clara */
+  --cor-branca: #ffffff;
+
+  --cor-footer: #222;
+  --cor-footer-texto: #bbb;
+
+  --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --sombra-leve: 0 2px 5px rgba(0,0,0,0.1);
+  --sombra-media: 0 2px 6px rgba(0, 0, 0, 0.2);
+  --sombra-destaque: 0 2px 6px rgba(0, 74, 173, 0.3);
+}
+
+/*Reset básico*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Corpo do site */
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--cor-primaria);
+  padding: 20px 30px;
+  color: var(--cor-branca);
+  box-shadow: var(--sombra-leve);
+}
+
+/*Navegação principal */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav img {
+  height: 50px;
+  width: auto;
+  border-radius: 6px;
+  box-shadow: var(--sombra-media);
+  object-fit: contain;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--cor-branca);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #003380;
+  color: var(--cor-secundaria);
+  outline: none;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: var(--cor-branca);
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: var(--sombra-leve);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+section p {
+  font-size: 1rem;
+  color: var(--cor-texto-suave);
+}
+
+/*Boas-vindas com hora (script)*/
+#mensagem-boasvindas {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: var(--cor-primaria-clara);
+  border-radius: 8px;
+  box-shadow: var(--sombra-destaque);
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+/* Rodapé*/
+footer {
+  background-color: var(--cor-footer);
+  color: var(--cor-footer-texto);
+  text-align: center;
+  padding: 20px 15px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer p a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+footer p a:hover,
+footer p a:focus {
+  color: var(--cor-branca);
+  outline: none;
+}
+
+/*Responsividade */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  nav img {
+    align-self: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  main {
+    margin: 20px 15px;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 20px 20px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  #mensagem-boasvindas {
+    font-size: 1rem;
+  }
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*
+/*index002.html jogos*/
+
+
+/*Variáveis CSS - Facilita manutenção e tema */
+:root {
+  --cor-primaria: #004aad;           /* Azul São Caetano */
+  --cor-primaria-escuro: #003380;
+  --cor-secundaria: #ffd500;         /* Amarelo para destaque */
+  --cor-fundo-claro: #f9f9f9;
+  --cor-fundo-escuro: #222;
+  --cor-texto-claro: #333;
+  --cor-texto-escuro: #ddd;
+  --cor-borda: #ccc;
+  --cor-botao-fundo: #007bff;
+  --cor-botao-fundo-hover: #0056b3;
+  --raio-borda: 8px;
+}
+
+/*Reset básico e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*Container de vídeos */
+.video-container {
+  margin-top: 10px; /* Espaço entre texto e vídeo */
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 560px; /* Limita largura em telas grandes */
+  height: 315px;
+  border-radius: var(--raio-borda);
+  display: block;
+  border: none;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+  .video-container iframe {
+    height: 200px;
+  }
+}
+
+/*Campo de busca (script)*/
+#search {
+  display: block;
+  margin: 15px auto;
+  padding: 8px 12px;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#search:focus {
+  border-color: var(--cor-primaria);
+  outline: none;
+  box-shadow: 0 0 5px var(--cor-primaria);
+}
+
+/*Modos claro e escuro*/
+.dark-mode {
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-texto-escuro);
+}
+
+.dark-mode section {
+  background-color: #333;
+  color: var(--cor-texto-escuro);
+}
+
+.dark-mode footer {
+  background-color: #111;
+  color: #ccc;
+}
+
+/*Botões: voltar ao topo e modo escuro */
+#btnTopo, #temaBtn {
+  position: fixed;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: var(--cor-botao-fundo);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: var(--raio-borda);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: none; /* Aparecem via JS */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#btnTopo {
+  bottom: 20px;
+}
+
+#btnTopo:hover {
+  background-color: var(--cor-botao-fundo-hover);
+}
+
+#temaBtn {
+  bottom: 70px;
+  display: block; /* Mantém visível */
+}
+
+#temaBtn:hover {
+  background-color: var(--cor-botao-fundo-hover);
+}
+
+/*Acessibilidade e foco*/
+#btnTopo:focus, #temaBtn:focus, #search:focus {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 2px;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+/*index3 noticias*/
+
+
+.noticia {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.noticia-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.noticia-conteudo h2 {
+  margin: 10px 0 5px;
+  color: #004aad;
+  font-size: 1.5rem;
+}
+
+.data-noticia {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.noticia-conteudo p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsivo */
+@media (min-width: 700px) {
+  .noticia {
+    flex-direction: row;
+  }
+
+  .noticia-img {
+    width: 40%;
+  }
+
+  .noticia-conteudo {
+    width: 60%;
+    padding-left: 20px;
+  }
+}
+/*script index003 noticias*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*index4 contato*/
+
+
+/* Variáveis para cores e espaçamentos */
+:root {
+  --color-bg-instagram: #f0f2ff;
+  --color-text: #333;
+  --color-link: #033E8C;
+  --color-link-hover: #022d6a;
+  --color-response: green;
+  --color-msg: #555;
+  --box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+  --gap-default: 12px;
+  --gap-small: 8px;
+  --padding-default: 15px 20px;
+  --padding-small: 10px 15px;
+  --font-size-default: 1rem;
+  --font-size-small: 0.9rem;
+  --insta-icon-size: 32px;
+  --insta-icon-size-small: 28px;
+}
+
+/* Estilo da caixa Instagram */
+.instagram-box {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-default);
+  margin: 10px 0 25px;
+  background-color: var(--color-bg-instagram);
+  padding: var(--padding-default);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.insta-icon {
+  width: var(--insta-icon-size);
+  height: var(--insta-icon-size);
+}
+
+.instagram-box p {
+  margin: 0;
+  font-size: var(--font-size-default);
+  color: var(--color-text);
+}
+
+.instagram-box a {
+  color: var(--color-link);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.instagram-box a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 480px) {
+  .instagram-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-small);
+    padding: var(--padding-small);
+  }
+
+  .insta-icon {
+    width: var(--insta-icon-size-small);
+    height: var(--insta-icon-size-small);
+  }
+
+  .instagram-box p {
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Estilos para mensagens do formulário */
+#resposta {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--color-response);
+}
+
+#horario-msg {
+  margin-top: 5px;
+  font-style: italic;
+  color: var(--color-msg);
+}
+
+
+
+
+
+
+
+/*https://color.adobe.com/pt/create/image
+https://favicon.io/favicon-converter*/
+/*https://www.dafont.com/pt/
+https://fonts.google.com/*/
+/*device brealpoints*/
+/*/* Small phones */
+@media (max-width: 480px) {
+  /* Styles for small mobile devices */
+}
+
+/* Tablets and larger phones */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Styles for larger phones */
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for tablets */
+}
+
+/* Small desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for small desktops */
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+  /* Styles for large desktops */
+}

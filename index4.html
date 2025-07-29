@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Caetano - contato</title>
+    <link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+     <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+    <nav>
+      <img src="Associação_Desportiva_São_Caetano.png" alt="Escudo do São Caetano">
+      <ul>
+        <li><a href="index.html"target="_self" rel="next">Início</a></li>
+        <li><a href="index002.html" target="_self" rel="next">jogos</a></li>
+        <li><a href="index3.html" target="_self" rel="next">Notícias</a></li>
+        <li><a href="index4.html" target="_self" rel="next">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+   <main>
+    <section>
+      <h1>Entre em Contato</h1>
+      <p id="horario-msg"></p>
+
+      <!-- Formulário -->
+      <form id="contactForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea><br>
+
+        <button type="submit">Enviar</button>
+        <p id="resposta"></p>
+      </form>
+
+      <!-- Contato direto -->
+      <h2>Redes Sociais</h2>
+<div class="instagram-box">
+  <img src="icon-1562136_1280.png" alt="Ícone do Instagram" class="insta-icon">
+  <p>
+    Também acompanhe a torcida organizada do São Caetano: 
+    <a href="https://www.instagram.com/sangue.azul.torcida" target="_blank" rel="noopener">
+      @sangue.azul.torcida
+    </a>
+  </p>
+</div>
+
+
+      <!-- Mapa -->
+      <h2>Localização DO ESTADIO DO São Caetano</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.28165404584!2d-46.56237282488875!3d-23.63008227875266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5cd12f3fe7f5%3A0xba458c571f09697!2sEst%C3%A1dio%20Municipal%20Anacleto%20Campanella!5e0!3m2!1spt-BR!2snl!4v1753721251579!5m2!1spt-BR!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5511999999999" target="_blank" 
+     style="position:fixed; bottom:20px; right:20px; background-color:#25D366; color:white; padding:15px; border-radius:50%; font-size:20px; text-align:center; text-decoration:none;">
+     <i class="fab fa-whatsapp"></i>
+  </a>
+
+   <footer>
+    <p>&copy; 2025 São Caetano. Todos os direitos reservados.</p>
+  </footer>
+  
+     <script>
+  // Resposta ao envio do formulário
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("resposta").innerText = "Mensagem enviada com sucesso!";
+  });
+
+  // Mensagem com horário de atendimento
+  const hora = new Date().getHours();
+  const msg = (hora >= 9 && hora < 18)
+    ? "Estamos online! Mande uma mensagem."
+    : "Estamos fora do horário. Responderemos em breve.";
+  document.getElementById("horario-msg").innerText = msg;
+</script>
+</body>
+</html>

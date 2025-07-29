@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="História, conquistas e atualidade do São Caetano, clube destaque do futebol brasileiro.">
+<title>São Caetano - História e Notícias</title>
+<link rel="stylesheet" href="estilos/style.css">
+<link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+<nav aria-label="Menu principal">
+<img src="Associação_Desportiva_São_Caetano.png" alt="Escudo da Associação Desportiva São Caetano">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="index002.html">Jogos</a></li>
+<li><a href="index3.html">Notícias</a></li>
+<li><a href="index4.html">Contato</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h1>São Caetano - História e Notícias</h1>
+
+<section id="boasvindas">
+<p id="mensagem-boasvindas"></p>
+</section>
+
+<section id="historia">
+<article>
+<h2>História do São Caetano</h2>
+<p>
+O São Caetano surgiu como uma equipe de destaque no cenário do futebol brasileiro, conquistando torcedores com sua determinação e desempenho surpreendente nas competições nacionais.
+</p>
+</article>
+</section>
+
+<section id="titulos">
+<article>
+<h2>Títulos e Conquistas</h2>
+<p>
+Ao longo de sua trajetória, o clube alcançou resultados expressivos, sendo vice-campeão da Copa Libertadores e do Campeonato Brasileiro, além de títulos estaduais.
+</p>
+</article>
+</section>
+
+<section id="idolos">
+<article>
+<h2>Ídolos do Clube</h2>
+<p>
+Nomes como Adhemar, Sérgio e outros jogadores marcaram época e contribuíram para a identidade do São Caetano, inspirando novas gerações.
+</p>
+</article>
+</section>
+
+<section id="atualidade">
+<article>
+<h2>O São Caetano Hoje</h2>
+<p>
+Atualmente, o São Caetano busca se reestruturar, apostando em jovens talentos e na paixão de sua torcida para voltar ao cenário principal do futebol brasileiro.
+</p>
+</article>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2025 São Caetano. Todos os direitos reservados.</p>
+<p>
+<a href="#historia">História</a> |
+<a href="#titulos">Títulos</a> |
+<a href="#idolos">Ídolos</a> |
+<a href="#atualidade">Atualidade</a>
+</p>
+</footer>
+
+<script>
+function getHoraAtualFormatada() {
+const agora = new Date();
+const horas = String(agora.getHours()).padStart(2, '0');
+const minutos = String(agora.getMinutes()).padStart(2, '0');
+const segundos = String(agora.getSeconds()).padStart(2, '0');
+return `${horas}:${minutos}:${segundos}`;
+}
+
+function mostrarMensagemBoasVindas() {
+const elementoMensagem = document.getElementById('mensagem-boasvindas');
+setInterval(() => {
+elementoMensagem.textContent = `Bem-vindo ao site do São Caetano! Agora são ${getHoraAtualFormatada()}.`;
+}, 1000);
+}
+
+window.onload = mostrarMensagemBoasVindas;
+</script>
+</body>
+</html>
